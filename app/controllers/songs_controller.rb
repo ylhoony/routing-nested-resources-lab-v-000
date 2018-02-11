@@ -19,12 +19,6 @@ class SongsController < ApplicationController
 
   def show
     if params[:artist_id]
-      # begin
-      #   artist = Artist.find(params[:artist_id])
-      # rescue ActiveRecord::RecordNotFound => e
-      #   artist = nil
-      # end
-
       @artist = Artist.find(params[:artist_id])
       @song = @artist.songs.find_by(id: params[:id])
 
