@@ -1,8 +1,4 @@
 
-<% if flash[:alert] %>
-  <p><%= flash[:alert] %></p>
-<% end %>
-
 <h1><%= link_to @song.title, song_path(@song) %></h1>
 <h3> by <%= display_artist(@song) %></h3>
 
