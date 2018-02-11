@@ -69,7 +69,7 @@ class SongsController < ApplicationController
   def destroy
     @song = Song.find(params[:id])
     @song.destroy
-    flash[:alert] = "Song deleted."
+    flash[:notice] = "Song deleted."
     redirect_to songs_path
   end
 
